@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="root" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" spacing="10.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.InstructionController">
+   <children>
+      <Label text="Welcome to Snake+">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label text="Get as many points as you can before you inevitably die.">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label text="You can control the snake using the arrow keys." wrapText="true">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <VBox alignment="CENTER_LEFT">
+         <children>
+            <Label text="There are four different types of fruits:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER_LEFT" spacing="15.0">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/apple.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Apple will give you 5 points">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="15.0">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/pomegranate.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Pomegranate will spawn pomegranate seeds throughout the screen. Eat as many as you can before they disappear!" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="15.0">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/durian.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Durian will reverse all your controls for 5 seconds. Be careful!" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="15.0">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/dragonfruit.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Dragonfruit will double your speed and points received for 10 seconds." wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" spacing="80.0">
+         <children>
+            <Button fx:id="backBtn" mnemonicParsing="false" text="BACK">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Label text="GOOD LUCK!!">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Button fx:id="startBtn" mnemonicParsing="false" text="START!">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets left="30.0" right="30.0" />
+   </padding>
+</VBox>

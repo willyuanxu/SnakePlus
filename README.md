@@ -1,0 +1,15 @@
+¬Project Description
+
+To run: 
+- Import in Eclipse or your favorite IDE as a Java project
+- Run application/Main.java
+
+Snake+: Snake+ is a single player game that resembles the game mechanics of the classic Snake game, with a few additional features. Just like the traditional Snake game, the objective of the game is to gain as many points as possible before dying. The game will not have a winning state, but will keep track of the high scores. The game will be controlled with the arrow keys.  
+
+The differentiating factors of the game lies in fruits. There are 4 different types of fruits that the snake may acquire in his quest to become longer. First is the apple, an ordinary fruit similar to the normal Snake game. When the playable snake eats an apple, he gains length, and acquires 5 points. The second type is the pomegranate. Whenever the snake acquires a pomegranate, the screen will start to fill up with pomegranate seeds from top left corner all the way to the bottom right corner. As soon as the screen fills up, the pomegranate seeds will start to disappear in the order which they appeared. During this whole time, the player snake may try to eat as many of the seeds as possible. The each of the seed will count as 1 point and will not increase the length of the snake. The third type is the dragon fruit. Dragon fruit will double the speed the snake travels but also double the points for every apple the snake eats. The last type of fruit is durian. If the snake eats a durian, the controls will be reversed, aka up is down, left is right etc. The different types of fruit has different spawn rate, with apple spawning with 90% rate and all other special fruits has 3.33% spawn rate. 
+
+Architecture 
+
+The game follows the MVC architecture, where the application acts as a relay between the different views and controllers. There are four views in total: opening, instructions, gameplay and ending. Each of the views have a dedicated controller, with only the gameplay view having a model to manage the data. The controller for the gameplay view relays information between the view itself and the model. The model itself is a series of objects utilizing the principles of encapsulation and polymorphism. The most basic object is a GridCell, and provides the basic variables that a grid might need, such as x, y index, image, and functions that check if another GridCell overlaps with itself. There are two classes that extends GridCell, which are FruitCell and SnakeCell. They represent the cells that contain fruits and snake. FruitCell and SnakeCell both have its unique functions and private variables which handles their associated logic. Snake is a class which represents the snake player itself, and encapsulates an ArrayList of SnakeCells. It manages the snake cells through functions like move and growSnake, which are exposed to the controller to call. It also handles the complex logic of making sure each part of the snake looks the way it’s supposed to, so the snake as a whole feels coherent.
+
+ 
